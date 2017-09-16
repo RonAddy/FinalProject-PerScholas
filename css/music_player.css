@@ -1,0 +1,37 @@
+/*remove default button styling */
+/*changes color to white*/
+
+button {
+    border: none;
+    background: none;
+    color: white;
+    outline: none;
+    flex: 1;
+}
+
+/*changes color when hovered*/
+button:hover {
+    color: grey;
+}
+
+/*changes color when button is clicked*/
+button:active {
+    color: gold;
+}
+
+/*previous song button styling*/
+#btn1 {
+    font-size: 30px;
+    position: relative;
+    bottom: 5px;
+    left: 0;
+    
+}
+
+/*next song button styling */
+#btn2 {
+    font-size: 23px;
+    position: relative;
+    bottom: 6px;
+    right: 0;
+}

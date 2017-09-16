@@ -1,0 +1,63 @@
+/*(fixed) modal appaers in center of focus when scrolling*/
+/*the background dims a little due to opacity setting in rgba*/
+/*z-indexed to lay above other content*/
+/*opacity set to 0 to keep modal hidden by default*/
+
+.modal {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: rgba(0,0,0,0.9);
+	z-index: 2;
+	opacity: 0;
+	pointer-events: none; /*used so modal can appear when targeted*/
+    transition: 1s;
+	height:100%;
+
+}
+
+/*displays modal and allows for curosr to click on items within*/
+
+.modal:target{
+	opacity:1;
+	pointer-events: auto;
+    z-index: 9;
+}
+
+/*set the styling for the div containing the youtube videos*/
+/*background settings changes modal opacity for better viewing*/
+
+.modal > div{
+	width: 95%;
+    height: 80%;
+	position: relative;
+	margin: 5% auto;
+	padding: 10px 20px 20px 20px;
+	border-radius: 40px;
+	background: rgba(0,0,0,0.5);
+    z-index: 99999999;
+}
+
+/*styling for the modal exit button*/
+/*bold font, positon in top right corner*/
+
+.exit {
+	background: grey;
+	color: white;
+	position: absolute;
+	right: -12px;
+	text-align: center;
+	width:54px;
+	text-decoration: none;
+	font-weight: bold;
+	border-radius:2px;
+	box-shadow: 1px 1px 3px dimgrey;
+}
+
+/*red color background change on hover of exit button*/
+
+.exit:hover {
+	background: red;
+}

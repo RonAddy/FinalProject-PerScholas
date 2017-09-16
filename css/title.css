@@ -1,0 +1,11 @@
+/*Defult style for title's on each page*/
+.title {
+     font-family: steak;
+     font-size: 60pt;
+     color: white;
+     width: 100%;
+     background-color: black;
+     text-align: center; 
+     display: block;
+}
+

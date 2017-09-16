@@ -1,0 +1,176 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>"Videos"</title>
+    <link rel="stylesheet" type="text/css" href="css/title.css">
+    <link rel="stylesheet" type="text/css" href="css/footer.css">
+    <link rel="stylesheet" type="text/css" href="css/navbar.css">
+    <script type="text/javascript" src="js/nav_bar.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/modal.css">    
+</head>
+
+<style>
+    *{
+        margin: 0 auto;
+    }
+    
+    @font-face { 
+        font-family: steak; 
+        src: url(fonts/steak.TTF); 
+    } 
+    
+    body {
+        background-image: url(img/static.webp);
+    }
+
+    #layout {
+        width: 90%;
+        height: 100%;
+    }
+    
+/*this container holds three divs, each containing a h2 and img corresponding to song video*/
+/*    z-indexed to keep content above layout*/
+    #container {
+        width: 870px;
+        position: relative;
+        z-index: 1;
+        top: 100px;
+    }
+    
+/*each img is preceded by a heading, styling below*/
+    h2 {
+        color: navajowhite;
+        font-family: steak;
+        text-align: center;
+        font-size: 40pt;  
+    }
+
+/* custom styling for footer on this page*/
+    
+    footer {
+        top: 377px;
+        position: relative;
+    }
+
+/*this cointainer holds the img for the film layout*/
+    #container2 {
+        display: block;
+        position: absolute;
+        top; 0;
+        width: 100%;
+        height: 1700px;
+    }
+/*hover effects given to images who are assigned below class*/
+    .vidDiv:hover {
+        opacity: 0.3;
+        transition: 0.7s;
+    }
+</style>
+
+<!--heading for page-->
+<h1 class="title" font-family="steak">Videos</h1>
+
+<body>
+
+<!--Same sidenav menu used for each page-->
+<!--this anchor will be used to open the menu-->
+<!--CSS character for "trigram heaven" (or "burger menu" icon)-->
+
+<a onclick="openMenu()" id="menuBtn">&#9776;</a> 
+
+<!--
+This nav elenemt holds the links for the side menu
+The first anchor is the x "button" to close the menu   
+-->
+
+<nav id="navBar" class="sideMenu">
+    <a id="close" onclick="closeMenu()">&times;</a>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="1family.html">1 Family <br>1 Foundation</a>
+    <a href="music.html">Music</a>
+    <a href="videos.html">Videos</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="booking.html">Book</a>
+</nav>
+
+<!--used center tags to keep content in center of page-->
+<!--"container2" id holds the layout background on every page-->
+
+
+<center>
+<div id="container2">
+    <img src="img/layout2.png" id="layout">
+</div>
+</center>
+
+<!--
+Each div with id will contain a picture of the video and a heading
+The picture will open a modal with the video
+youtube links embeded into modal div
+-->
+<center id="container">
+<div>
+    <div id="panda">
+        <h2>"Panda"</h2>
+        <a href="#modal_1"><img src="img/vid1.png" class="vidDiv" width="100%"></a>
+        <div id="modal_1" class="modal">
+				<div>
+<!--href allows page to reload and modal to stop being targeted, returning it to original state, with opacity: 0;"-->
+					<a href="videos.html" title="Exit" class="exit">X</a>
+					<iframe width="100%" height="100%" src="https://www.youtube.com/embed/d7hWOVew1fM" frameborder="0" allowfullscreen autoplay></iframe>
+				</div>
+        </div>
+    </div>
+
+    <div id="ewing">
+        <h2>"Patrick Ewing"</h2>
+        <a href="#modal_2"><img src="img/vid2.png" class="vidDiv" width="100%"></a>
+        <div id="modal_2" class="modal">
+				<div>
+					<a href="videos.html" title="Exit" class="exit">X</a>
+					<iframe width="100%" height="100%" src="https://www.youtube.com/embed/Gr5dVi-RQR8" frameborder="0" allowfullscreen></iframe>
+				</div>
+        </div>
+    </div>
+
+    <div id="poppin">
+        <h2>"Poppin"</h2>
+        <a href="#modal_3"><img src="img/vid3.png" class="vidDiv" width="100%"></a>
+        <div id="modal_3" class="modal">
+				<div>
+					<a href="videos.html" title="Exit" class="exit">X</a>
+					<iframe width="100%" height="100%" src="https://www.youtube.com/embed/h06ZqHpF5yM" frameborder="0" allowfullscreen></iframe>
+				</div>
+        </div>
+    </div>
+</div>
+</center>
+
+<!--The footer holds the copyright of the creator (me) and the social media links-->
+
+<footer>
+
+<!--Icons were taken from https://iconmonstr.com/-->
+<!--  https://iconmonstr.com/facebook-4/-->
+<!--  https://iconmonstr.com/?s=instagram-->
+<!--  https://iconmonstr.com/?s=soundcloud-->
+<!--   https://iconmonstr.com/?s=youtube-->
+<!--https://iconmonstr.com/?s=twitter-->
+
+    <ul class="content" id="social">
+        <li><a href="https://www.facebook.com/NickBreezyOnline/"><img src="img/media_fb.jpg"></a></li>
+        <li><a href="https://www.instagram.com/nickbreezyofficial/"><img src="img/media_ig.jpg"></a></li>
+        <li><a href="https://soundcloud.com/nickbreezyofficial"><img src="img/media_sd.jpg"></a></li>
+        <li><a href="https://www.youtube.com/user/bretwum24"><img src="img/media_yt.jpg"></a></li>
+        <li><a href="https://twitter.com/NickBreezyy"><img src="img/media_tw.jpg"></a></li>
+    </ul>
+  
+    <div class="content">Copyright &copy; 2017 Ron_Addy Productions</div>
+    
+</footer>
+    
+
+</body>
+</html>

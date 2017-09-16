@@ -1,0 +1,200 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Untitled Document</title>
+    <link rel="stylesheet" type="text/css" href="css/footer.css">
+    <link rel="stylesheet" type="text/css" href="css/title.css">
+    <link rel="stylesheet" type="text/css" href="css/navbar.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <script type="text/javascript" src="js/nav_bar.js"></script>
+</head>
+
+<style>
+        * {
+        margin: 0 auto;
+    }
+    
+    @font-face { 
+        
+        font-family: steak; 
+        src: url(fonts/steak.TTF); 
+    } 
+        
+    body {
+        background-image: url(img/static.webp);
+    }
+    
+    #layout {
+        width: 90%;
+        height: 100%;
+    }
+   
+/*    position absolute to manipulate sizing/position*/
+    #container2 {
+        display: block;
+        position: absolute;
+        top; 0;
+        width: 100%;
+        height: 1950px;
+        
+    }
+    
+/*    z-indexed to keep content above layout*/
+    #container {
+        width: 870px;
+        position: relative;
+        z-index: 1;
+        top: 100px;
+    }
+
+/*logo moved down to fit in layout*/
+    #logo {
+        position:relative;
+        top: -55px;
+        
+    }
+
+/*    display flex to have contained imgs spaced evenly*/
+    
+    .picDiv_1 {
+        display: flex;
+    }
+/* given "flex 1" to define the space amount for each pic   */
+/* margin-top to move pics down a little from logo*/
+    
+    .picSet_1 {
+        flex: 1;
+        position: relative;
+        margin-top: -80px;
+    }
+    
+    p {
+       font-family: 'Lato', sans-serif;
+       font-size: 22pt;
+       color: navajowhite;
+       line-height: 35px; 
+    }
+/*used to highlight organization name*/
+    span {
+        color: white;
+        font-style: italic;
+    }
+    
+    footer {
+        top: 175px;
+        position: relative;
+    }
+</style>
+
+<h1 class="title">1 Family 1 Foundation</h1>
+
+<body>
+
+<!--Same sidenav menu used for each page-->
+<!--this anchor will be used to open the menu-->
+<!--CSS character for "trigram heaven" (or "burger menu" icon)-->
+
+<a onclick="openMenu()" id="menuBtn">&#9776;</a> 
+
+<!--
+This nav elenemt holds the links for the side menu
+The first anchor is the x "button" to close the menu   
+-->
+
+<nav id="navBar" class="sideMenu">
+    <a id="close" onclick="closeMenu()">&times;</a>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="1family.html">1 Family <br>1 Foundation</a>
+    <a href="music.html">Music</a>
+    <a href="videos.html">Videos</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="booking.html">Book</a>
+</nav>
+
+<!--used center tags to keep content in center of page-->
+<!--"container2" id holds the layout background on every page-->
+
+
+<center>
+    <div id="container2">
+        <img src="img/layout2.png" id="layout">
+    </div>
+</center>
+
+<!--"container" id holds the main content on every page-->
+
+<center id="container">
+    <div>
+<!--       img recieved personally from my cousin-->
+        <img src="img/1fam.jpeg" id="logo">
+
+<!--this div will hold the two imgs, which are given a 100% border-radius-->
+        <div class="picDiv_1">
+            <div class="picSet_1"><img src="img/1family_5.jpeg" style="border-radius:100%;"></div>
+            <div class="picSet_1"><img src="img/1family_6.jpeg" style="border-radius:100%;"></div>
+        </div>
+<!--breaks and horizontal lines to space out content-->
+       
+        <br>
+        <hr>
+        <hr>
+        <br>
+        
+<!--used inline styling for link to official website-->
+       
+        <p><span>"1 Family 1 Foundation"</span> is a non-profit organization determined to strengthen inner-city communities and promote hidden talent within them. Based out of Atlanta, and exhibiting strong roots from within the DMV, the 1Fam1Foundation movement looks to expand their outreach from beyond the east coast to a worldwide scope. Shown above are a few memebers of the board, as well as some of the artists who are part of this movement. To learn more or see a calendar of events, please visit the <a href="http://www.1family1foundation.com/1family1foundation.html" style="color: red;text-decoration: none;">official website</a>, or the Facebook and Instagram pages for live updates. 
+        </p>
+        
+        <br>
+        <br>
+        <br>
+        <br>
+
+        <div class="picDiv_1">
+    <!--Icons created by Creative Commons -->
+    <!--https://www.iconfinder.com/icons/313113/camera_instagram_icon#size=128-->
+    <!--https://www.iconfinder.com/icons/313103/facebook_fb_icon#size=128-->
+            <a href="https://www.facebook.com/pg/1Family1Foundation-Charity-1705885909629789/about/?ref=page_internal"><img src="img/fb.png"></a>
+            <a href="https://www.instagram.com/reggaezoneworld/"><img src="img/ig.png"></a>
+            
+        </div>
+
+        <br>
+        
+<!--inline styling to have pic run length of container div-->
+       
+        <div>
+            <img src="img/1family_2.jpeg" style="width:100%;">
+        </div>
+
+    </div>
+</center>
+
+<!--The footer holds the copyright of the creator (me) and the social media links-->
+
+<footer>
+
+<!--Icons were taken from https://iconmonstr.com/-->
+<!--  https://iconmonstr.com/facebook-4/-->
+<!--  https://iconmonstr.com/?s=instagram-->
+<!--  https://iconmonstr.com/?s=soundcloud-->
+<!--   https://iconmonstr.com/?s=youtube-->
+<!--https://iconmonstr.com/?s=twitter-->
+
+    <ul class="content" id="social">
+        <li><a href="https://www.facebook.com/NickBreezyOnline/"><img src="img/media_fb.jpg"></a></li>
+        <li><a href="https://www.instagram.com/nickbreezyofficial/"><img src="img/media_ig.jpg"></a></li>
+        <li><a href="https://soundcloud.com/nickbreezyofficial"><img src="img/media_sd.jpg"></a></li>
+        <li><a href="https://www.youtube.com/user/bretwum24"><img src="img/media_yt.jpg"></a></li>
+        <li><a href="https://twitter.com/NickBreezyy"><img src="img/media_tw.jpg"></a></li>
+    </ul>
+  
+    <div class="content">Copyright &copy; 2017 Ron_Addy Productions</div>
+    
+</footer>
+    
+</body>
+
+</html>

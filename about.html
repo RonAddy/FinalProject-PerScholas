@@ -1,0 +1,165 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>About Nick</title>
+    <link rel="stylesheet" type="text/css" href="css/footer.css">
+    <link rel="stylesheet" type="text/css" href="css/title.css">
+    <link rel="stylesheet" type="text/css" href="css/navbar.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <script type="text/javascript" src="js/nav_bar.js"></script>
+    
+</head>
+
+
+<style>
+    * {
+        margin: 0 auto;
+    }
+    
+    @font-face { 
+        
+        font-family: steak; 
+        src: url(fonts/steak.TTF); 
+    } 
+        
+    body {
+        background-image: url(img/static.webp);
+    
+    }
+    
+    #layout {
+        width: 90%;
+        height: 100%;
+    }
+
+/*    position absolute to manipulate sizing/position*/
+    
+    #container2 {
+        display: block;
+        position: absolute;
+        top; 0;
+        width: 100%;
+        height: 1150px;
+        
+    }
+    
+/*    z-indexed to keep content above layout*/
+    #container {
+        position: relative;
+        z-index: 1;
+        top: 0;
+    }
+    
+    #nick {
+        border-radius: 100%;
+        position: relative;
+        top: 100px;
+    }
+
+/*    margins to keep text within layout*/
+    p {
+        font-family: 'Lato', sans-serif;
+        font-size: 22pt;
+        color: navajowhite;
+        margin: 150px 290px 15px 280px;
+        line-height: 35px;
+        
+    }
+    
+/*although I am linking external footer, internal styling is for specific sizing reasons*/
+    
+    footer {
+        top: 73px;
+        position: relative;
+    }
+    
+    h2 {
+        font-family: 'Lato', sans-serif;
+        font-size: 18pt; 
+    }
+/*  hover effects to highlight link before it is pressed  */
+    h2:hover {
+        color: navajowhite;
+    }
+
+</style>
+
+<h1 class="title">About Nick</h1>
+ 
+<body>
+   
+<!--Same sidenav menu used for each page-->
+<!--this anchor will be used to open the menu-->
+<!--CSS character for "trigram heaven" (or "burger menu" icon)-->
+
+<a onclick="openMenu()" id="menuBtn">&#9776;</a> 
+
+<!--
+This nav elenemt holds the links for the side menu
+The first anchor is the x "button" to close the menu   
+-->
+
+<nav id="navBar" class="sideMenu">
+    <a id="close" onclick="closeMenu()">&times;</a>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="1family.html">1 Family <br>1 Foundation</a>
+    <a href="music.html">Music</a>
+    <a href="videos.html">Videos</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="booking.html">Book</a>
+</nav>
+
+<!--used center tags to keep content in center of page-->
+<!--"container2" id holds the layout background on every page-->
+
+<center>
+<div id="container2">
+    <img src="img/layout2.png" id="layout">
+</div>
+</center>
+
+<!--"container" id holds the main content on every page-->
+<!--nick img taken from his instagram (link in footer)-->
+
+<center id="container">
+<div>
+    <img src="img/about.jpg" id="nick">
+    
+    <p>Born in Canada and repping the DMV area, Nick Breezy (also known as "Kid Kente") is on the come up, looking to put his footprint on the hip-hop scene. The revolution will not be televised so you'd better get on the wave ASAP! Breezy is a proud member of the 1 Family 1 Foundation organization, a movement based in the Atlanta area, promoting positivity in inner-city communities and provindg great music from numerous artists. Nick is a resident of Atalanta himself and has performed in many venues around the country. 
+    </p>
+    <a href="1family.html" style="text-decoration: none;color: red;"><h2>1 Family 1 Foundation</h2></a>
+    <a href="music.html" style="text-decoration: none;color: red;"><h2>Music</h2></a>
+    <a href="videos.html" style="text-decoration: none;color: red;"><h2>Videos</h2></a>
+</div>     
+</center>    
+
+
+<!--The footer holds the copyright of the creator (me) and the social media links-->
+
+<footer>
+
+<!--Icons were taken from https://iconmonstr.com/-->
+<!--  https://iconmonstr.com/facebook-4/-->
+<!--  https://iconmonstr.com/?s=instagram-->
+<!--  https://iconmonstr.com/?s=soundcloud-->
+<!--   https://iconmonstr.com/?s=youtube-->
+<!--https://iconmonstr.com/?s=twitter-->
+
+    <ul class="content" id="social">
+        <li><a href="https://www.facebook.com/NickBreezyOnline/"><img src="img/media_fb.jpg"></a></li>
+        <li><a href="https://www.instagram.com/nickbreezyofficial/"><img src="img/media_ig.jpg"></a></li>
+        <li><a href="https://soundcloud.com/nickbreezyofficial"><img src="img/media_sd.jpg"></a></li>
+        <li><a href="https://www.youtube.com/user/bretwum24"><img src="img/media_yt.jpg"></a></li>
+        <li><a href="https://twitter.com/NickBreezyy"><img src="img/media_tw.jpg"></a></li>
+    </ul>
+  
+    <div class="content">Copyright &copy; 2017 Ron_Addy Productions</div>
+    
+</footer>
+    
+    
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+* {
+    margin: 0 auto;
+}
+
+/*styling for footer in each page */
+
+footer {
+    font-family: 'Lato', sans-serif;
+    font-size: 12pt;
+    color: white;
+    width: 100%;
+    background-color: black;
+    text-align: center; 
+    height: 40px;
+    padding-top: 12px;
+    display: flex;
+    overflow-y:hidden;
+    position: relative;
+}
+  
+/*display inline to have icons right next to each other*/
+li {
+    display: inline;
+    padding: 10px;
+}
+
+#social li a:hover {
+
+    border-bottom: 1px solid gold;
+    transition: .5s;
+}

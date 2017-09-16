@@ -1,0 +1,188 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Untitled Document</title>
+    <link rel="stylesheet" type="text/css" href="css/footer.css">
+    <link rel="stylesheet" type="text/css" href="css/title.css">
+    <link rel="stylesheet" type="text/css" href="css/navbar.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <script type="text/javascript" src="js/nav_bar.js"></script>
+</head>
+
+<style>
+    * {
+        margin: 0 auto;
+    }
+    
+    @font-face { 
+        
+        font-family: steak; 
+        src: url(fonts/steak.TTF); 
+    } 
+        
+    body {
+        background-image: url(img/static.webp);
+    
+    }
+    
+    #layout {
+        width: 90%;
+        height: 100%;
+    }
+    
+/*this cointainer holds the img for the film layout*/
+    
+    #container2 {
+        display: block;
+        position: absolute;
+        top; 0;
+        width: 100%;
+        height: 695px;
+    }
+    
+/*although I am linking external footer, internal styling is for specific sizing reasons*/
+    
+    footer {
+        top: 110px;
+        position: relative;
+    }
+    
+/*    z-indexed to keep content above layout*/
+    #container {
+        z-index: 2;
+        position: relative;
+        top: 75px;
+        display: inline;
+        
+    }
+    
+/*styling for buttons below to have them positoned correctly*/
+    #btn1 {
+        position: relative;
+        left: 350px;
+        top: 270px;
+        font-size: 10pt;
+    }
+    
+    #btn2 {
+        position: relative;
+        left: 1050px;
+        top: -290px;
+    }
+    
+
+    
+</style>
+
+<h1 class="title">Gallery</h1>
+
+<body>
+
+<!--Same sidenav menu used for each page-->
+<!--this anchor will be used to open the menu-->
+<!--CSS character for "trigram heaven" (or "burger menu" icon)-->
+
+<a onclick="openMenu()" id="menuBtn">&#9776;</a> 
+
+<!--
+This nav elenemt holds the links for the side menu
+The first anchor is the x "button" to close the menu   
+-->
+
+<nav id="navBar" class="sideMenu">
+    <a id="close" onclick="closeMenu()">&times;</a>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="1family.html">1 Family <br>1 Foundation</a>
+    <a href="music.html">Music</a>
+    <a href="videos.html">Videos</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="booking.html">Book</a>
+</nav>
+
+<!--used center tags to keep content in center of page-->
+<!--"container2" id holds the layout background on every page-->
+
+
+<center>
+    <div id="container2">
+        <img src="img/layout2.png" id="layout">
+    </div>
+</center>
+
+<!--"container" id holds the main content on every page-->
+
+<center id="container">
+   <button type="button" onclick="last()" id="btn1">&#9668;</button>
+    <div>
+        <img src="img/slide1.jpg" id="gallSlide">
+    </div>
+    <button type="button" onclick="next()" id="btn2">&#9658;</button>
+</center>
+
+<!--The footer holds the copyright of the creator (me) and the social media links-->
+
+<footer>
+
+<!--Icons were taken from https://iconmonstr.com/-->
+<!--  https://iconmonstr.com/facebook-4/-->
+<!--  https://iconmonstr.com/?s=instagram-->
+<!--  https://iconmonstr.com/?s=soundcloud-->
+<!--   https://iconmonstr.com/?s=youtube-->
+<!--https://iconmonstr.com/?s=twitter-->
+
+    <ul class="content" id="social">
+        <li><a href="https://www.facebook.com/NickBreezyOnline/"><img src="img/media_fb.jpg"></a></li>
+        <li><a href="https://www.instagram.com/nickbreezyofficial/"><img src="img/media_ig.jpg"></a></li>
+        <li><a href="https://soundcloud.com/nickbreezyofficial"><img src="img/media_sd.jpg"></a></li>
+        <li><a href="https://www.youtube.com/user/bretwum24"><img src="img/media_yt.jpg"></a></li>
+        <li><a href="https://twitter.com/NickBreezyy"><img src="img/media_tw.jpg"></a></li>
+    </ul>
+  
+    <div class="content">Copyright &copy; 2017 Ron_Addy Productions</div>
+    
+</footer>
+</body>
+
+<script>
+    
+var picArr = [];
+    
+picArr[0] = 'img/slide1.jpg';
+picArr[1] = 'img/slide2.jpg';
+picArr[2] = 'img/slide3.jpg';
+picArr[3] = 'img/slide4.jpg';
+picArr[4] = 'img/slide5.jpg';
+picArr[5] = 'img/slide6.jpg';
+picArr[6] = 'img/slide7.jpg';
+picArr[7] = 'img/slide8.jpg';
+picArr[8] = 'img/slide9.jpg';
+picArr[9] = 'img/slide10.jpg';
+picArr[10] = 'img/slide11.jpg';
+    
+var currPic = 0;
+var id = document.getElementById('gallSlide');
+    
+function next() {
+    if (currPic > 10) {
+        currPic = 0;
+    }
+    
+    id.setAttribute("src", picArr[currPic]);
+    currPic++;
+}
+    
+function last() {
+    if (currPic < 0) {
+        currPic = 10;
+    }
+    
+    id.setAttribute("src", picArr[currPic]);
+    currPic--;
+}
+    
+
+    
+</script>
+</html>

@@ -1,0 +1,187 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Untitled Document</title>
+    <link rel="stylesheet" type="text/css" href="css/title.css">
+    <link rel="stylesheet" type="text/css" href="css/navbar.css">
+    <link rel="stylesheet" type="text/css" href="css/footer.css">
+    <script type="text/javascript" src="js/nav_bar.js"></script> 
+</head>
+
+<style>
+    *{
+        margin: 0 auto;
+    }
+    
+    @font-face { 
+        font-family: steak; 
+        src: url(fonts/steak.TTF); 
+    } 
+    
+    body {
+        background-image: url(img/static.webp);
+    }
+    
+    #layout {
+        width: 90%;
+        height: 100%;
+    }
+    
+    /*this cointainer holds the img for the film layout*/
+    #container2 {
+        display: block;
+        position: absolute;
+        top; 0;
+        width: 100%;
+        height: 2300px;
+    }
+    
+    /*although I am linking external footer, internal styling is for specific sizing reasons*/
+    
+    footer {
+        top: 77px;
+        position: relative;
+    }
+    
+/*    z-indexed to keep content above layout*/
+    #container {
+        height: 100%;
+        width: 870px;
+        z-index: 1;
+        position: relative;
+        top: 100px;
+    }
+    
+    .rowDivs {
+        height: 370px;
+        margin: 0px 2px 0 0;
+        display: flex;
+    }
+    
+    .babyDivs {
+        flex: 1;
+        width: 200px;
+        height: 70%;
+        margin: 5px 2px 5px 0;
+    }
+</style>
+
+<!--heading for page-->
+<h1 class="title">Music</h1>
+
+<body>
+
+
+<!--Same sidenav menu used for each page-->
+<!--this anchor will be used to open the menu-->
+<!--CSS character for "trigram heaven" (or "burger menu" icon)-->
+
+<a onclick="openMenu()" id="menuBtn">&#9776;</a> 
+
+<!--
+This nav elenemt holds the links for the side menu
+The first anchor is the x "button" to close the menu   
+-->
+<nav id="navBar" class="sideMenu">
+    <a id="close" onclick="closeMenu()">&times;</a>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="1family.html">1 Family <br>1 Foundation</a>
+    <a href="music.html">Music</a>
+    <a href="videos.html">Videos</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="booking.html">Book</a>
+</nav>
+
+<!--used center tags to keep content in center of page-->
+<!--"container2" id holds the layout background on every page-->
+
+
+<center>
+<div id="container2">
+    <img src="img/layout2.png" id="layout">
+</div>
+</center>
+
+<!--"container" id holds the main content on every page-->
+
+<center id="container">
+<div>
+<!--   below div classed to display flex. babydiv class has flex 1 to display with even space-->
+<!--soundcloud music embeded straight from site-->
+   
+    <div class="rowDivs">
+        <div class="babyDivs">
+            <iframe width="100%" height="300px" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/203242786&amp;color=ff9900&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>
+        </div>
+        <div class="babyDivs">
+            <iframe width="100%" height="300px" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/223470320&amp;color=%23ff9900&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>
+        </div>
+    </div>
+    <div class="rowDivs">
+        <div class="babyDivs">
+            <iframe width="100%" height="300px" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/233858733&amp;color=%23ff9900&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>
+        </div>
+        <div class="babyDivs">
+            <iframe width="100%" height="300px" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/255098986&amp;color=%23ff9900&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>
+        </div>
+    </div>
+    <div class="rowDivs">
+        <div class="babyDivs">
+            <iframe width="100%" height="300px" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/257553352&amp;color=%23ff9900&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>
+        </div>
+        <div class="babyDivs">
+            <iframe width="100%" height="300px" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/270068605&amp;color=%23ff9900&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>
+        </div>
+    </div>
+    <div class="rowDivs">
+        <div class="babyDivs">
+            <iframe width="100%" height="300px" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/299352614&amp;color=%23ff9900&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>
+        </div>
+        <div class="babyDivs">
+            <iframe width="100%" height="300px" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/304744742&amp;color=%23ff9900&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>
+        </div>
+    </div>
+     <div class="rowDivs">
+        <div class="babyDivs">
+            <iframe width="100%" height="300px" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/341751847&amp;color=%23ff9900&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>
+        </div>
+        <div class="babyDivs">
+            <iframe width="100%" height="300px" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/341754875&amp;color=%23ff9900&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>
+        </div>
+    </div>
+    <div class="rowDivs">
+        <div class="babyDivs">
+            <iframe src="https://www.audiomack.com/embed/song/nick-breezy-1/ballout" scrolling="no" width="100%" height="250px" scrollbars="no" frameborder="0"></iframe>
+        </div>
+    </div>
+</div> 
+</center>
+
+<!--The footer holds the copyright of the creator (me) and the social media links-->
+
+<footer>
+
+<!--Icons were taken from https://iconmonstr.com/-->
+<!--  https://iconmonstr.com/facebook-4/-->
+<!--  https://iconmonstr.com/?s=instagram-->
+<!--  https://iconmonstr.com/?s=soundcloud-->
+<!--   https://iconmonstr.com/?s=youtube-->
+<!--https://iconmonstr.com/?s=twitter-->
+
+    <ul class="content" id="social">
+        <li><a href="https://www.facebook.com/NickBreezyOnline/"><img src="img/media_fb.jpg"></a></li>
+        <li><a href="https://www.instagram.com/nickbreezyofficial/"><img src="img/media_ig.jpg"></a></li>
+        <li><a href="https://soundcloud.com/nickbreezyofficial"><img src="img/media_sd.jpg"></a></li>
+        <li><a href="https://www.youtube.com/user/bretwum24"><img src="img/media_yt.jpg"></a></li>
+        <li><a href="https://twitter.com/NickBreezyy"><img src="img/media_tw.jpg"></a></li>
+    </ul>
+  
+    <div class="content">Copyright &copy; 2017 Ron_Addy Productions</div>
+    
+</footer>
+    
+
+</body>
+</html>
