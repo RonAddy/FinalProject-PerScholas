@@ -8,31 +8,31 @@
     <link rel="stylesheet" type="text/css" href="css/footer.css">
     <link rel="stylesheet" type="text/css" href="css/music_player.css">
     <script type="text/javascript" src="js/nav_bar.js"></script>
-    
+
 </head>
 
 <style>
-    
+
 /*Set auto margins for elements on page*/
     * {
         margin: 0 auto;
     }
 /*custom font face taken from "https://newevolutiondesigns.com/100-free-hip-hop-fonts"*/
-    
-    @font-face { 
-        font-family: steak; 
-        src: url(fonts/steak.TTF); 
-    } 
+
+    @font-face {
+        font-family: steak;
+        src: url(fonts/steak.TTF);
+    }
 
 /*tv static background taken from "https://giphy.com/gifs/static-13NfN5QNA8tmX6" */
-    
+
     body {
         background-image: url(img/static.webp);
-    
+
     }
 
 /*id for header, takes full width of screen */
-    
+
     #videoShow{
         height:820px;
         width: 100%;
@@ -40,33 +40,33 @@
         top: 0;
         right: 0;
         position: absolute;
-        
+
     }
-    
+
 /*z-index moves frame above the video*/
-    
+
     #frame {
         position: relative;
         z-index: 1;
-        
+
     }
 /*id for video display, margin used to position video inside of frame*/
-    #vids { 
+    #vids {
         display: block;
         margin-top: -645px;
     }
 
 /*1 family 1 foundation logo at top of frame, z-indexed to be on top of frame*/
 /*positioned to be in the center*/
-    
+
     #logo {
         z-index: 2;
         position: relative;
         top: 0px;
     }
-    
+
 /*although I am linking external footer, internal styling is for specific sizing reasons*/
-    
+
     footer {
         top: 670px;
         display: flex;
@@ -83,7 +83,7 @@ helps to emulate a snug fit of the video in the frame*/
         top: 112px;
         right: 63px;
     }
-    
+
     #black2 {
         background-color: black;
         width: 183px;
@@ -93,7 +93,7 @@ helps to emulate a snug fit of the video in the frame*/
         left: 63px;
         top: 112px;
     }
-    
+
 </style>
 
 
@@ -101,10 +101,10 @@ helps to emulate a snug fit of the video in the frame*/
 <!--The center tag is positioning the logo in the middle of the frame   -->
 
 <center id="logo">
-  
+
    <!--logo received personally from my cousin (via text)-->
-    <img src="img/1fam1foun_burned.png"> 
-    
+    <img src="img/1fam1foun_burned.png">
+
 </center>
 
 
@@ -113,7 +113,7 @@ helps to emulate a snug fit of the video in the frame*/
 <!--this anchor will be used to open the menu-->
 <!--CSS character for "trigram heaven" (or "burger menu" icon)-->
 
-<a onclick="openMenu()" id="menuBtn">&#9776;</a> 
+<a onclick="openMenu()" id="menuBtn">&#9776;</a>
 
 
 
@@ -133,20 +133,20 @@ helps to emulate a snug fit of the video in the frame*/
 
 <!-- Video autoplay on load, and muted   -->
     <video id="vids" src="vids/trimEnd.mp4" height="65%" width="100%" autoplay muted></video>
-</header> 
-    
+</header>
+
 <!--
 This anchor element is the burger menu "button"
-onclick, the menu will open to the side (see javascript below)    
+onclick, the menu will open to the side (see javascript below)
 -->
 
-<a onclick="openMenu()" id="menuBtn">&#9776;</a> 
-   
+<a onclick="openMenu()" id="menuBtn">&#9776;</a>
+
 <!--
 This nav elenemt holds the links for the side menu
-The first anchor is the x "button" to close the menu   
+The first anchor is the x "button" to close the menu
 -->
-    
+
 <nav id="navBar" class="sideMenu">
     <a id="close" onclick="closeMenu()">&times;</a>
     <a href="index.html">Home</a>
@@ -155,7 +155,7 @@ The first anchor is the x "button" to close the menu
     <a href="music.html">Music</a>
     <a href="videos.html">Videos</a>
     <a href="gallery.html">Gallery</a>
-    <a href="booking.html">Book</a>
+    <!-- <a href="booking.html">Book</a> -->
 </nav>
 
 <body>
@@ -170,7 +170,7 @@ The first anchor is the x "button" to close the menu
 <!--  https://iconmonstr.com/?s=soundcloud-->
 <!--   https://iconmonstr.com/?s=youtube-->
 <!--https://iconmonstr.com/?s=twitter-->
-   
+
     <ul class="content" id="social" style="flex: 1;">
         <li><a href="https://www.facebook.com/NickBreezyOnline/"><img src="img/media_fb.jpg"></a></li>
         <li><a href="https://www.instagram.com/nickbreezyofficial/"><img src="img/media_ig.jpg"></a></li>
@@ -178,28 +178,28 @@ The first anchor is the x "button" to close the menu
         <li><a href="https://www.youtube.com/user/bretwum24"><img src="img/media_yt.jpg"></a></li>
         <li><a href="https://twitter.com/NickBreezyy"><img src="img/media_tw.jpg"></a></li>
     </ul>
-  
+
     <div class="content" style="flex: 1;">Copyright &copy; 2017 Ron_Addy Productions</div>
     <div style="flex: 1;">
         <button type="button" onclick="backward()" id="btn1" style="flex: 1;">&#9668;&#9668;</button>
         <audio src="audio/mp3_7.mp3" id="music_ply" autoplay controls style="flex: 1;"></audio>
-        <button type="button" onclick="forward()" id="btn2" style="flex: 1;">&#9658;&#9658;</button> 
+        <button type="button" onclick="forward()" id="btn2" style="flex: 1;">&#9658;&#9658;</button>
     </div>
-    
-</footer>
-    
-                
-<script>
-    
-//JavaScript requirement 1
-    
-//This array will hold all of the trimmed music videos to be diplayed in the slideshow
-    
-var vidArray = [];
-    
-//Each video is being assigned their index value (position) in the array    
 
-    
+</footer>
+
+
+<script>
+
+//JavaScript requirement 1
+
+//This array will hold all of the trimmed music videos to be diplayed in the slideshow
+
+var vidArray = [];
+
+//Each video is being assigned their index value (position) in the array
+
+
 vidArray[0] = 'vids/trimOpener.mp4';
 vidArray[1] = 'vids/trim0.mp4';
 vidArray[2] = 'vids/trim1.mp4';
@@ -211,47 +211,47 @@ vidArray[7] = 'vids/trim6.mp4';
 vidArray[8] = 'vids/trim7.mp4';
 vidArray[9] = 'vids/trim8.mp4';
 vidArray[10] = 'vids/trimEnd.mp4'; //used a trim from https://www.youtube.com/watch?v=OUoA-dKQhtc
-    
-//Testing to see if array is indeed holding the items    
-//console.log(vidArray); 
+
+//Testing to see if array is indeed holding the items
+//console.log(vidArray);
 
 //The currentVid variable is set to 0, the first video in the array
 //This var will be used to change the video in the below function
-    
+
 var currentVid = 0;
 
 //The vidLoop function will retrieve the video element's id above ("vids") and change the source of the video to another in the array
 //The if statement is placed to change the source to the first video after going through the length of the array
 //The last statment will assign the currentVid variable the next video's index value
-    
+
 function vidLoop () {
-    
+
     if (currentVid >= vidArray.length) {
         currentVid = 0;
     }
-    
+
     document.getElementById("vids").setAttribute("src", vidArray[currentVid]);
     currentVid++;
 }
-    
+
 //This function will run the above function again after three seconds
 //Allowing the slideshow to loop through all videos in the array
-    
+
  function replay() {
      setInterval(vidLoop, 3000);
  }
-    
-//Used to automatically run the slideshow as soon as the page loads
-    
-window.onload = replay;
-    
 
-    
-    
-    
-    
-    
-    
+//Used to automatically run the slideshow as soon as the page loads
+
+window.onload = replay;
+
+
+
+
+
+
+
+
 //JavaScript 3
 //This wil be used to create an array of the songs avaialbe to play
 //This uses a similar setup to the slideshow above
@@ -267,42 +267,42 @@ musicArr[5] = 'audio/mp3_6.mp3';
 
 var currSong = 0;
 var id = document.getElementById("music_ply");
-    
-    
+
+
 //this function will be used to play the previous song in the array
 //if the index value is equal to 0, the index wil be reasigned the last song in the array
-    
+
 function backward() {
-    
+
     if (currSong === 0) {
         id.play;
         currSong === 6;
-        
+
     }else if (currSong < 0) {
         id.setAttribute("src", musicArr[6])
         currSong--;
     }
-    
+
     id.setAttribute("src", musicArr[currSong-1]);
     currSong--;
 }
- 
+
 //this function will be used to play the next song in the array
 //if the index value is equal to 6 (last song), the index will be reasigned the first song in the array
-    
+
 function forward() {
-    
+
     if (currSong > 6) {
         currSong === 0;
         id.setAttribute("src", musicArr[currSong]);
     }
-    
+
     id.setAttribute("src", musicArr[currSong+1]);
     currSong++;
 }
 
-</script>    
-    
+</script>
+
 
 </body>
 </html>
